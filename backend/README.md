@@ -15,6 +15,22 @@ py -m venv .venv
 .\.venv\Scripts\python.exe clipper.py "https://youtu.be/RPTFTa8fgNs?si=TEDG1jDjGRgI9_Cz"
 ```
 
+## API
+
+```powershell
+.\.venv\Scripts\python.exe -m uvicorn api:app --host 127.0.0.1 --port 8010
+```
+
+API utama:
+
+```text
+GET  /api/health
+POST /api/jobs
+GET  /api/jobs
+GET  /api/jobs/{job_id}
+GET  /outputs/<generated-file>
+```
+
 Opsi yang sering dipakai:
 
 ```powershell
